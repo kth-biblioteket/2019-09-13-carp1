@@ -1,6 +1,6 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
+carpentry: "lc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
                       # Be sure to update the Carpentry type in _config.yml as well.  
 venue: "Stockholms Universitet"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "Geovetenskapens hus, sal Y22, Svante Arrhenius väg 14, Stockholms universitet"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")

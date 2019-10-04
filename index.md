@@ -294,7 +294,7 @@ please preview your site before committing, and make sure to run
   {% elsif page.carpentry == "dc" %}
   Data Carpentry
   {% elsif page.carpentry == "lc" %}
-  Library Carpentry
+  Carpentry
   {% endif %}
   workshop,
   you will need access to the software described below.

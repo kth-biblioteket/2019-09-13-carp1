@@ -812,7 +812,7 @@ please preview your site before committing, and make sure to run
   <h3>OpenRefine</h3>
   <p>
     For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that requires a Java Runtime Environment on your machine (if lacking, can be downloaded from here: <a href="https://jdk.java.net/13/">JRE</a>). 
+    web browser. <em>Note:</em> this is a Java program that requires a Java Runtime Environment on your machine (if lacking, can be downloaded from here: <a href="https://jdk.java.net/13/">JDK</a>). 
     It runs inside a web browser(Chrome is recommended, Firefox also works ok), but no web connection is needed.
   </p>
 

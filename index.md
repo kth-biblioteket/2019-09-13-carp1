@@ -3,6 +3,7 @@ layout: workshop      # DON'T CHANGE THIS.
 carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
                       # Be sure to update the Carpentry type in _config.yml as well.  
 venue: "Stockholm Trio University Libraries"        # brief name of host site without address (e.g., "Euphoric State University")
+
 address: "Zoom, registration required"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "sv"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "se"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
@@ -17,57 +18,16 @@ helper:      # boxed, comma-separated list of helpers' names, like ["Marlyn Wesc
 email: ["linaandr@kth.se"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  "https://pad.carpentries.org/2021-10-13-stockholmtrio"           # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 # eventbrite: 75862682325         # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
----
-
-{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
-
-{% comment %}
-Edit the values in the block above to be appropriate for your workshop.
-If the value is not 'true', 'false', 'null', or a number, please use
-double quotation marks around the value, unless specified otherwise.
-And run 'make workshop-check' *before* committing to make sure that changes are good.
-{% endcomment %}
 
 
-
-{% comment %}
-For a workshop please delete the following block
-{% endcomment %}
 {% if page.carpentry != site.carpentry %}
 <div class="alert alert-warning">
 You specified <code>carpentry: {{page.carpentry}}</code> in <code>index.md</code> and
 <code>carpentry: {{site.carpentry}}</code> in <code>_config.yml</code>. Make sure you edit both files. After editing <code>_config.yml</code>, you need to run <code>make serve</code> again to 
 see the changes take effect locally.
 </div>
-{% endif %}
+{% endif %}<h2 id="general">General Information</h2>
 
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-
-<h2 id="general">General Information</h2>
-
-{% comment %}
-INTRODUCTION
-
-Edit the general explanatory paragraph below if you want to change
-the pitch.
-{% endcomment %}
 {% if page.carpentry == "swc" %}
 {% include sc/intro.html %}
 {% elsif page.carpentry == "dc" %}
@@ -77,11 +37,12 @@ the pitch.
 {% endif %}
 
 {% comment %}
-AUDIENCE
+
 
 Explain who your audience is.  (In particular, tell readers if the
 workshop is only open to people from a particular institution.
 {% endcomment %}
+Researchers and graduate students at KTH, KI or SU
 {% if page.carpentry == "swc" %}
 {% include sc/who.html %}
 {% elsif page.carpentry == "dc" %}
@@ -219,24 +180,16 @@ to match your plans.  You may also want to change 'Day 1' and 'Day
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
 
-{% if page.carpentry == "swc" %}
-{% include sc/schedule.html %}
-{% elsif page.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif page.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% endif %}
+{% include custom-schedule.html}
+#{% if page.carpentry == "swc" %}
+#{% include sc/schedule.html %}
+#{% elsif page.carpentry == "dc" %}
+#{% include dc/schedule.html %}
+#{% elsif page.carpentry == "lc" %}
+#{% include lc/schedule.html %}
+#{% endif %}
 
-{% comment %}
-Collaborative Notes
 
-If you want to use an Etherpad, go to
-
-http://pad.carpentries.org/YYYY-MM-DD-site
-
-where 'YYYY-MM-DD-site' is the identifier for your workshop,
-e.g., '2015-06-10-esu'.
-{% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
   We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
@@ -262,7 +215,7 @@ This is one of the places where people frequently make mistakes, so
 please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
-<!--h2 id="syllabus">Syllabus</h2-->
+<h2 id="syllabus">Syllabus</h2>
 
 {% if page.carpentry == "swc" %}
 {% include sc/syllabus.html %}
@@ -295,7 +248,7 @@ please preview your site before committing, and make sure to run
   {% elsif page.carpentry == "dc" %}
   Data Carpentry
   {% elsif page.carpentry == "lc" %}
-  Carpentry
+  Library Carpentry
   {% endif %}
   workshop,
   you will need access to the software described below.
@@ -409,7 +362,7 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
 
-<!--div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatibility
+<div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatibility
   is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
   <p>
@@ -470,7 +423,7 @@ please preview your site before committing, and make sure to run
       </article>
     </div>
   </div>
-</div--> {% comment %} End of 'Git' section. {% endcomment %}
+</div> {% comment %} End of 'Git' section. {% endcomment %}
 
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
   <h3>Text Editor</h3>
@@ -537,7 +490,7 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
-<!--div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
+<div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
   the workshop will teach Python using something other than
   the Jupyter notebook.
   Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
@@ -633,9 +586,9 @@ please preview your site before committing, and make sure to run
     which has instructions on how to test that everything was installed correctly.
   </p>
   {% endcomment %}
-</div--> {% comment %} End of 'Python' section. {% endcomment %}
+</div> {% comment %} End of 'Python' section. {% endcomment %}
 
-<!--div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
+<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
   <h3>R</h3>
 
   <p>
@@ -689,44 +642,7 @@ please preview your site before committing, and make sure to run
       </article>
     </div>
   </div>
-</div--> {% comment %} End of 'R' section. {% endcomment %}
-
-<!--div id="sql"> {% comment %} Start of 'DB Browser for SQLite' section. {% endcomment %}
-  <h3>DB Browser for SQLite</h3>
-
-  <p>
-    You will need to install DB Browser for SQLite to complete these lessons. DB Browser for SQLite provides a graphical user interface for connecting to and interacting with a SQLite database. This application bundles SQLite, so you won’t need to install SQLite separately.
-  </p>
-
-  <div>
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#sql-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#sql-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#sql-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
-    </ul>
-    <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="sql-windows">
-        <p>
-          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-macos">
-        <p>
-          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-linux">
-        <p>
-          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
-        </p>
-      </article>
-    </div>
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-      <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-      Instructors will provide a workaround for it if needed.</strong></p>
-</div--> {% comment %} End of 'SQLite' section. {% endcomment %}
+</div> {% comment %} End of 'R' section. {% endcomment %}
 
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
@@ -813,8 +729,8 @@ please preview your site before committing, and make sure to run
   <h3>OpenRefine</h3>
   <p>
     For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that requires a Java Runtime Environment on your machine (if lacking, can be downloaded from here: <a href="https://jdk.java.net/13/">JDK</a>). 
-    It runs inside a web browser(Chrome is recommended, Firefox also works ok), but no web connection is needed.
+    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
+    It runs inside a web browser, but no web connection is needed.
   </p>
 
   <div>

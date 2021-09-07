@@ -8,11 +8,12 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor traning for instance)
 carpentry: "swc"
-curriculum: "gapminder"
+curriculum: "swc-gapminder"
 flavor: "r"
 
+
 # Overall title for pages.
-title: "Stockholm Trio University Libraries Carpentries Worskhop"
+title: "Stockholm Trio Carpentries workshop October 13-19 2021"
 
 
 #------------------------------------------------------------
@@ -30,7 +31,7 @@ repository: <USERNAME>/<PROJECT>
 # Email address, no mailto:
 # (Don't change this -- the contact address for your workshop will be set 
 # in the index.md file)
-email: "team@carpentries.org"
+email: "linaandr@kth.se"
 
 # Sites.
 amy_site: "https://amy.software-carpentry.org/workshops"

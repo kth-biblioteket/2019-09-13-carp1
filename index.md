@@ -179,13 +179,14 @@ to match your plans.  You may also want to change 'Day 1' and 'Day
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
 
-{% if page.carpentry == "swc" %}
-{% include sc/schedule.html %}
-{% elsif page.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif page.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% endif %}
+{% include custom-schedule.html}
+#{% if page.carpentry == "swc" %}
+#{% include sc/schedule.html %}
+#{% elsif page.carpentry == "dc" %}
+#{% include dc/schedule.html %}
+#{% elsif page.carpentry == "lc" %}
+#{% include lc/schedule.html %}
+#{% endif %}
 
 
 {% if page.collaborative_notes %}

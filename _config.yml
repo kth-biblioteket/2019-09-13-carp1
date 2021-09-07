@@ -7,10 +7,12 @@
 # dc: Data Carpentry
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor traning for instance)
-carpentry: "lc"
+carpentry: "swc"
+curriculum: "gapminder"
+flavor: "r"
 
 # Overall title for pages.
-title: "Carp 1"
+title: "Stockholm Trio University Libraries Carpentries Worskhop"
 
 
 #------------------------------------------------------------

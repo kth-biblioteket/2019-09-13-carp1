@@ -4,7 +4,7 @@ layout: workshop      # DON'T CHANGE THIS.
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
 venue: "Stockholm Trio university libraries"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "Synapsen 2, Karolinska institute library in Solna"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+address: "Synapsen 2, 3rd floor, Karolinska institute library in Solna (Berzelius väg 7b)"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "se"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "59.346100"        # decimal latitude of workshop venue (use https://www.latlong.net/)
@@ -163,7 +163,8 @@ This block displays the date and links to Google Calendar.
 </p>
 {% endif %}
 
-Sign up will open on April 15.
+
+Sign-up is open from April 15 to May 13 (or until full). <a href="https://www.kth.se/form/carpentries-may16-17">Click here to sign up.</a>
 
 {% comment %}
 SPECIAL REQUIREMENTS
